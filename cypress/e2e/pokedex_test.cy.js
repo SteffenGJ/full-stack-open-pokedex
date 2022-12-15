@@ -5,4 +5,8 @@ describe('Pokedex', function() {
     cy.contains('ivysaur')
     cy.contains('Pokémon and Pokémon character names are trademarks of Nintendo.')
   })
+  it('works when you navigate to a specific pokemon', function() {
+    cy.visit('http://localhost:5000')
+    cy.location('http://localhost:5000/pokemon/ivysaur').should('include', 'chlorophyll')
+  })
 })
