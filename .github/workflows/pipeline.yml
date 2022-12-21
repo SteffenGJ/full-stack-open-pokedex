@@ -32,4 +32,4 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: Deploy app
-        run: /Users/steffenjensen/.fly/bin/flyctl deploy --remote-only
+        run: flyctl deploy --remote-only
